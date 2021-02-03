@@ -1,10 +1,10 @@
 # Site settings
-title: Hanuman
-description: Hanuman is a minimal yet powerful Jekyll theme for your blogs and websites.
-cover: assets/images/radhakrishna.jpg
-logo: assets/images/logo.png
-favicon: assets/images/favicon.png
-baseurl: "/blog/" # the subpath of your site, e.g. /blog/ or / for root
+title: Chloe
+description: My test blog. 之后会用于post个人简历
+cover: ./assets/images/radhakrishna.jpg
+logo: ./assets/images/logo.png
+favicon: ./assets/images/favicon.png
+baseurl: "/" # the subpath of your site, e.g. /blog/ or / for root
 url: "https://chloceg.github.io/blog/" # the base hostname & protocol for your site
 
 pagination:
