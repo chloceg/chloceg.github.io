@@ -14,9 +14,8 @@ disqus: Chloe
 
 
 highlighter: pygments
-markdown: redcarpet
-redcarpet:
-  extensions: ["tables"]
+markdown: kramdown
+
 
 defaults:
   - scope:
