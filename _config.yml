@@ -13,7 +13,7 @@ disqus: Chloe
 ##Make sure to edit the above fields, especially for disqus.
 
 
-highlighter: pygments
+highlighter: rouge
 markdown: kramdown
 
 
