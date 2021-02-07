@@ -57,6 +57,12 @@ p
   list-style:none
 }
 
+
+.footer{
+position:absolute;
+bottom:0;
+}
+
 .container
 {
   width:80%;
