@@ -298,7 +298,7 @@ pre
 {
   font-size:3em;
   font-weight:700;
-  color:#d90006;
+  color:#000080;
   line-height:130%
 }
 
@@ -322,7 +322,7 @@ pre
 #welcome-greeting h2 a
 {
   font-weight:100;
-  color:#d90006
+  color:#000080
 }
 
 .credit
@@ -376,7 +376,7 @@ pre
 {
   font-size:35px;
   font-weight:700;
-  color:#d90006;
+  color:#DDA0DD
   padding-top:15px
 }
 
