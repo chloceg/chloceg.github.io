@@ -9,8 +9,8 @@
 title                    : "Jeff Ge"
 description              : "AI Architect & Engineer with 3+ years of industry experience driving AI transformation through LLMs, Graph Analytics, and NLP."
 url                      : "https://chloceg.github.io"
-baseurl                  : "/JeffGe.github.io"
-repository               : "chloceg/JeffGe.github.io"
+baseurl                  : ""
+repository               : "chloceg/chloceg.github.io"
 
 # google analytics
 google_analytics_id      :  # get google_analytics_id from https://analytics.google.com/analytics/
