@@ -1,12 +1,6 @@
 ---
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 11ba44d71df2f37bd52fa0370808e909_ac220b37ad8e11f1b128525400f8a581
-    ReservedCode1: 8RmvB2Lsotr0bjByjQfRWIYH2kXWAaPapoF732fANG11rsWyfIxEBu9VdxCkLCCzCxl7HHabnql3IUhiWBvoxfvifPKdbQ7vq+76OYgP+tna99VR8a3qFScE2WsPmI2QNBsrwAYxesWqnznjVWuFYS+L5vqlxqWOyDdGxMPejTwfOapV13WFAncGUyU=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 11ba44d71df2f37bd52fa0370808e909_ac220b37ad8e11f1b128525400f8a581
-    ReservedCode2: 8RmvB2Lsotr0bjByjQfRWIYH2kXWAaPapoF732fANG11rsWyfIxEBu9VdxCkLCCzCxl7HHabnql3IUhiWBvoxfvifPKdbQ7vq+76OYgP+tna99VR8a3qFScE2WsPmI2QNBsrwAYxesWqnznjVWuFYS+L5vqlxqWOyDdGxMPejTwfOapV13WFAncGUyU=
+title: "Jeff Ge"
+permalink: /
 ---
 
 
@@ -97,5 +91,3 @@ AIGC:
 - **Email**: [njycgqw@icloud.com](mailto:njycgqw@icloud.com)
 - **Phone**: +852 5335 2638
 - **CV (PDF)**: [Download CV]({{ site.baseurl }}/files/Jeff-Ge-CV.pdf)
-*（内容由AI生成，仅供参考）*
-*（内容由AI生成，仅供参考）*
