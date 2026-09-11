@@ -1,3 +1,9 @@
 _site/
 push.sh
 .DS_Store
+
+# Gemfile.lock is intentionally not committed: it is platform-specific (it
+# carries the Windows wdm gem) and its pinned versions drift out of sync with
+# github-pages, which is what broke the Pages build. CI resolves it fresh.
+.bundle/
+Gemfile.lock

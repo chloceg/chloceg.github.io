@@ -1,27 +1,26 @@
 source "https://rubygems.org"
 
-# Hello! This is where you manage which Jekyll version is used to run.
-# When you want to use a different version, change it below, save the
-# file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
+# The site is built by GitHub Actions (.github/workflows/jekyll.yml).
 #
-#     bundle exec jekyll serve
-#
-# This will help ensure the proper Jekyll version is running.
-# Happy Jekylling!
+# We build with Jekyll 4 directly instead of the github-pages gem: that gem pins
+# Jekyll to 3.10 and locks every plugin to an exact version (jekyll-feed = 0.17.0,
+# jekyll-sitemap = 1.4.0, ...), which is what produced
+# "The github-pages gem can't satisfy your Gemfile's dependencies".
+gem "jekyll", "~> 4.4"
 
-gem "github-pages", group: :jekyll_plugins
-
-# If you want to use Jekyll native, uncomment the line below.
-# To upgrade, run `bundle update`.
-
-# gem "jekyll"
-
-gem "wdm", "~> 0.1.0" if Gem.win_platform?
-
-# If you have any plugins, put them here!
 group :jekyll_plugins do
-  # gem "jekyll-archives"
-  gem "jekyll-feed"
-  gem 'jekyll-sitemap'
-  gem 'hawkins'
+  gem "jekyll-feed"           # Atom feed
+  gem "jekyll-sitemap"        # sitemap.xml
+  gem "jekyll-gist"           # {% gist %} Liquid tag
+  gem "jekyll-redirect-from"  # redirect_from / redirect_to front matter
 end
+# jekyll-paginate is intentionally absent: it was dropped upstream in favour of
+# jekyll-paginate-v2, and this site has no _posts collection and no `paginator`
+# calls anywhere, so nothing needs it.
+# jemoji is likewise unused (no {% jemoji %} tag in the templates).
+
+# Windows-only helpers. Scoping by `platforms:` keeps them off macOS/Linux, unlike
+# the old `if Gem.win_platform?` guard which leaked into the lockfile.
+# tzinfo-data supplies the Asia/Hong_Kong zone data Windows itself lacks.
+gem "wdm", "~> 0.1.0", platforms: [:mswin, :mingw, :x64_mingw]
+gem "tzinfo-data", platforms: [:mswin, :mingw, :x64_mingw]

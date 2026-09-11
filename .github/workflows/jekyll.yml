@@ -1,0 +1,64 @@
+name: Build and deploy Jekyll site to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Only one concurrent deployment. Requests made while the previous run is still
+# live are queued rather than cancelled, so a slow build never blocks a deploy.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          # Jekyll 4.4 needs Ruby >= 2.7; 3.3 is the sweet spot for the gems here.
+          ruby-version: "3.3"
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v6
+
+      # No Gemfile.lock is committed, so Bundler resolves fresh against current
+      # releases. The old committed lock was from 2021 (activesupport 6.0,
+      # jemoji 0.12) and could not be reconciled with modern gem versions.
+      - name: Install dependencies
+        run: bundle install --jobs 4 --retry 3
+
+      - name: Build with Jekyll
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        env:
+          JEKYLL_ENV: production
+
+      # v5 internally calls actions/upload-artifact@v7 (Node 24), which clears the
+      # "Node.js 20 is deprecated" warning that GitHub's own pages-build-deployment
+      # job raised.
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: ./_site
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

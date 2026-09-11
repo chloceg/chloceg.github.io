@@ -117,24 +117,14 @@ timezone: Asia/Hong_Kong # http://en.wikipedia.org/wiki/List_of_tz_database_time
 
 
 # Plugins
+# Two removals here:
+#   whitelist:      the deprecated Jekyll 3 alias for `plugins:`. It also listed
+#                   jemoji, which this site never enabled.
+#   jekyll-paginate: dropped along with the `compress_html:` block below it (that
+#                   one was dead too - no {% compress_html %} tag exists in any
+#                   template). Adding it back needs a pagination gem; see Gemfile.
 plugins:
-  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jekyll-redirect-from
-# mimic GitHub Pages with --safe
-whitelist:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
-
-
-# HTML Compression
-# - http://jch.penibelst.de/
-compress_html:
-  clippings: all
-  ignore:
-    envs: development
