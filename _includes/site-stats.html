@@ -1,0 +1,14 @@
+{% if site.visitor_count %}
+<div class="site-stats" aria-label="Site traffic">
+  <div class="site-stats__item">
+    <span class="site-stats__icon" aria-hidden="true"><i class="fas fa-fw fa-user"></i></span>
+    <span class="site-stats__label">Visitors</span>
+    <span class="site-stats__value" id="vercount_value_site_uv">-</span>
+  </div>
+  <div class="site-stats__item">
+    <span class="site-stats__icon" aria-hidden="true"><i class="fas fa-fw fa-eye"></i></span>
+    <span class="site-stats__label">Views</span>
+    <span class="site-stats__value" id="vercount_value_site_pv">-</span>
+  </div>
+</div>
+{% endif %}

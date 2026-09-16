@@ -256,6 +256,48 @@
   }
 }
 
+.site-stats {
+  width: 100%;
+  margin-top: 1em;
+  padding-top: 0.9em;
+  border-top: 1px solid $border-color;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65em 1em;
+
+  @include breakpoint($large) {
+    margin-top: 1.25em;
+    grid-template-columns: 1fr;
+  }
+}
+
+.site-stats__item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4em;
+  min-width: 0;
+  color: $text-color;
+  font-family: $sans-serif;
+  font-size: $type-size-6;
+  line-height: 1.4;
+}
+
+.site-stats__icon {
+  color: $gray;
+  flex: none;
+}
+
+.site-stats__label {
+  color: $gray;
+}
+
+.site-stats__value {
+  margin-left: auto;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  color: $darker-gray;
+}
+
 .author__urls_sm{
   padding: .25em;
   font-size: 1.75em;

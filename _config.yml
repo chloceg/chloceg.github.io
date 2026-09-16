@@ -12,8 +12,11 @@ url                      : "https://chloceg.github.io"
 baseurl                  : ""
 repository               : "chloceg/chloceg.github.io"
 
-# google analytics
-google_analytics_id      :  # get google_analytics_id from https://analytics.google.com/analytics/
+# Analytics
+# visitor_count shows unique visitors + page views in the sidebar (Vercount, no signup).
+visitor_count            : true
+google_analytics_id      :  # e.g. G-XXXXXXXXXX from https://analytics.google.com/
+clarity_id               :  # optional Microsoft Clarity project ID
 
 # SEO Related
 google_site_verification :  # get google_site_verification from https://search.google.com/search-console/about
