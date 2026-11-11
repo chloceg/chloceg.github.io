@@ -7,8 +7,12 @@ author_profile: false
 
 This site is a personal CV. A visitor counter (Vercount) may record aggregate unique visitors and page views.
 
+{% if site.statcounter_project and site.statcounter_security %}
+If Statcounter is enabled, their tracker records your IP address, coarse location / ISP, browser, pages viewed, and referrer. That data is stored by [Statcounter](https://statcounter.com/) (not on GitHub Pages) so the site owner can see who opened this CV. Statcounter's free plan keeps recent visitor activity for a limited time (currently 14 days).
+
+{% endif %}
 {% if site.visitor_log_url %}
-If the IP log is enabled, a request is sent to a private Cloudflare Worker when you open a page. The Worker stores:
+If the private IP log is enabled, a request is sent to a Cloudflare Worker when you open a page. The Worker stores:
 
 - IP address (from the connection, not typed into the page)
 - coarse location Cloudflare already has (country / city)

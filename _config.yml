@@ -17,8 +17,13 @@ repository               : "chloceg/chloceg.github.io"
 visitor_count            : true
 google_analytics_id      :  # e.g. G-XXXXXXXXXX from https://analytics.google.com/
 clarity_id               :  # optional Microsoft Clarity project ID
-# Private IP log (Cloudflare Worker). Leave empty until visitor-log/README.md is followed.
-# Do not paste IPs into this repo. The Worker stores them; Pages never sees them.
+# Free IP log, no server of your own: https://statcounter.com (Basic plan).
+# After signup, Config → Reinstall Code → copy Project ID and Security Code.
+# View IPs in Statcounter → Visitor Activity. Leave empty to keep this off.
+statcounter_project      :
+statcounter_security     :
+# Optional private log (Cloudflare Worker) if you do not want a third party
+# to store IPs. See visitor-log/README.md. Do not paste IPs into this repo.
 visitor_log_url          :
 
 # SEO Related

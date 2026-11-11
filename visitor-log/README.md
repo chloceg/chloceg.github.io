@@ -1,45 +1,56 @@
 # Visitor IP log
 
-GitHub Pages is static: the Pages server never sees visitor IPs. This Cloudflare Worker records them on the edge (`CF-Connecting-IP`) and keeps them **off** the public repo.
+GitHub Pages is static: the Pages server never sees visitor IPs. Pick one of the options below. Do not paste IPs into this repo.
 
-Retention: 90 days. Admin UI is on the Worker, not on `chloceg.github.io`.
+Hong Kong PDPO: IP addresses can be personal data. The footer links to `/privacy/`.
 
-Hong Kong PDPO: IP addresses can be personal data. The site footer links to `/privacy/` once this is enabled.
+## Option A — Statcounter (no server, free)
 
-## Deploy
+This is the path if you do not want to run or deploy anything yourself.
 
-1. Install Wrangler and log in:
+1. Sign up at [statcounter.com](https://statcounter.com/) (Basic plan, no credit card).
+2. Add a project for `https://chloceg.github.io`.
+3. Open **Config → Reinstall Code** and copy **Project ID** and **Security Code**.
+4. Put them in `_config.yml`:
+
+```yaml
+statcounter_project: 12345678
+statcounter_security: "yoursecuritycode"
+```
+
+5. Commit, push, wait for Pages to rebuild.
+6. Open Statcounter → **Visitor Activity**. Each row includes IP, location, ISP, page, and referrer.
+
+Invisible tracker (`sc_invisible=1`): no public badge. Sidebar Vercount stays for counts.
+
+Limits on the free Basic plan (as of 2026): about 5,000 sessions / month and 14 days of visitor-activity retention. IP data lives on Statcounter's servers, not yours.
+
+## Option B — Cloudflare Worker (IPs stay on your KV)
+
+Use this if you do not want a third-party analytics company to store IPs. You can paste the Worker in the [Cloudflare dashboard](https://dash.cloudflare.com/) (Workers & Pages → Create → paste `src/worker.js`) and bind a KV namespace named `VISITS`. No process runs on your laptop after that. CLI equivalent:
 
 ```bash
 cd visitor-log
 npx wrangler login
 npx wrangler kv namespace create VISITS
-```
-
-2. Put the printed KV `id` into `wrangler.toml` (`REPLACE_WITH_KV_NAMESPACE_ID`).
-
-3. Set a viewing password (do not commit it):
-
-```bash
+# paste the id into wrangler.toml
 npx wrangler secret put ADMIN_TOKEN
 npx wrangler deploy
 ```
 
-4. Copy the `*.workers.dev` URL into `_config.yml`:
+Then set `_config.yml`:
 
 ```yaml
 visitor_log_url: "https://chloceg-visitor-log.<account>.workers.dev"
 ```
 
-5. Commit and push `_config.yml` so the homepage starts sending beacons.
+Open the Worker root URL, enter `ADMIN_TOKEN`, and load the table. Retention: 90 days.
 
-Open the Worker root URL, enter `ADMIN_TOKEN`, and load the table. IPs never appear on the GitHub Pages site.
-
-## Local check (no Cloudflare account)
+## Local check of the Worker only
 
 ```bash
 node --test visitor-log/test.mjs
 node visitor-log/dev-server.mjs   # http://127.0.0.1:8787  token=dev-token
 ```
 
-Point `_config.yml` `visitor_log_url` at that URL only on your machine. Do not commit a live Worker URL until you have deployed one.
+Point `visitor_log_url` at that URL only on your machine. Do not commit it.
