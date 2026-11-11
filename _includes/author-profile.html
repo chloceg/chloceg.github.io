@@ -5,36 +5,37 @@
 <div itemscope itemtype="http://schema.org/Person" class="profile_box">
 
   <div class="author__avatar">
-    <img src="{{ author.avatar | relative_url }}" class="author__avatar" alt="{{ author.name }}">
+    <img src="{{ author.avatar | relative_url }}" class="author__avatar" alt="{{ author.name }}" itemprop="image">
   </div>
 
   <div class="author__content">
-    <h3 class="author__name">{{ author.name }}</h3>
-    {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
+    <h3 class="author__name" itemprop="name">{{ author.name }}</h3>
+    {% if author.bio %}<p class="author__bio" itemprop="jobTitle">{{ author.bio }}</p>{% endif %}
+    {% if author.location %}
+      <p class="author__location" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+        <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i>
+        <span itemprop="addressLocality">{{ author.location }}</span>
+      </p>
+    {% endif %}
+    {% if site.data.cv.open_to_work %}<p class="author__status">Open to opportunities</p>{% endif %}
   </div>
 
   <div class="author__urls-wrapper">
     <ul class="author__urls social-icons">
-      {% if site.description %}
-        <li><div style="white-space: normal; margin-bottom: 1em;">{{ site.description }}</div></li>
-      {% endif %}
-      {% if author.location %}
-        <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> {{ author.location }}</li>
-      {% endif %}
       {% if author.employer %}
-        <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> {{ author.employer }}</li>
+        <li><i class="fas fa-fw fa-building" aria-hidden="true"></i> {{ author.employer }}</li>
       {% endif %}
       {% if author.email %}
-        <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> Email</a></li>
+        <li><a href="mailto:{{ author.email }}" itemprop="email"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> Email</a></li>
       {% endif %}
       {% if author.phone %}
-        <li><i class="fas fa-fw fa-phone" aria-hidden="true"></i> {{ author.phone }}</li>
-      {% endif %}
-      {% if author.uri %}
-        <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+        <li><a href="tel:{{ author.phone | replace: ' ', '' }}" itemprop="telephone"><i class="fas fa-fw fa-phone" aria-hidden="true"></i> {{ author.phone }}</a></li>
       {% endif %}
       {% if author.github %}
-        <li><a href="https://github.com/{{ author.github }}"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+        <li><a href="https://github.com/{{ author.github }}" rel="me"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+      {% endif %}
+      {% if author.cv %}
+        <li><a href="{{ author.cv | relative_url }}"><i class="fas fa-fw fa-file-pdf" aria-hidden="true"></i> CV (PDF)</a></li>
       {% endif %}
       {% if author.linkedin %}
         <li><a href="https://www.linkedin.com/in/{{ author.linkedin }}"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
@@ -45,19 +46,22 @@
     </ul>
     <div class="author__urls_sm">
       {% if author.email %}
-        <a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i></a>
+        <a href="mailto:{{ author.email }}" aria-label="Email"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i></a>
       {% endif %}
-      {% if author.uri %}
-        <a href="{{ author.uri }}"><i class="fas fa-fw fa-link" aria-hidden="true"></i></a>
+      {% if author.phone %}
+        <a href="tel:{{ author.phone | replace: ' ', '' }}" aria-label="Phone"><i class="fas fa-fw fa-phone" aria-hidden="true"></i></a>
       {% endif %}
       {% if author.github %}
-        <a href="https://github.com/{{ author.github }}"><i class="fab fa-fw fa-github" aria-hidden="true"></i></a>
+        <a href="https://github.com/{{ author.github }}" rel="me" aria-label="GitHub"><i class="fab fa-fw fa-github" aria-hidden="true"></i></a>
+      {% endif %}
+      {% if author.cv %}
+        <a href="{{ author.cv | relative_url }}" aria-label="Download CV as PDF"><i class="fas fa-fw fa-file-pdf" aria-hidden="true"></i></a>
       {% endif %}
       {% if author.linkedin %}
-        <a href="https://www.linkedin.com/in/{{ author.linkedin }}"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/{{ author.linkedin }}" aria-label="LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i></a>
       {% endif %}
       {% if author.twitter %}
-        <a href="https://twitter.com/{{ author.twitter }}"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i></a>
+        <a href="https://twitter.com/{{ author.twitter }}" aria-label="Twitter"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i></a>
       {% endif %}
     </div>
   </div>

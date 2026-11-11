@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "Jeff Ge"
-description              : "AI Architect & Engineer with 3+ years of industry experience driving AI transformation through LLMs, Graph Analytics, and NLP."
+description              : "AI Architect & Engineer with 3+ years of industry experience driving AI transformation through LLMs, graph analytics, and NLP."
 url                      : "https://chloceg.github.io"
 baseurl                  : ""
 repository               : "chloceg/chloceg.github.io"
@@ -30,10 +30,11 @@ author:
   bio              : "AI Architect & Engineer"
   email            : "njycgqw@icloud.com"
   phone            : "+852 5335 2638"
-  location         : # not provided in the CV
-  employer         : # not provided in the CV
+  location         : "Hong Kong"
+  employer         : # last role ended Aug 2026; leave blank rather than invent a current employer
   uri              :
-  github           : # e.g., "github username"
+  github           : "chloceg"
+  cv               : "files/Jeff-Ge-CV.pdf"
   linkedin         : # e.g., "linkedin username"
   twitter          :
   facebook         :
@@ -71,6 +72,8 @@ exclude:
   - package.json
   - tmp
   - vendor
+  - scripts
+  - run_server.sh
 keep_files:
   - .git
   - .svn

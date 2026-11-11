@@ -33,6 +33,7 @@
 @import "page";
 @import "archive";
 @import "sidebar";
+@import "cv";
 
 @import "vendor/font-awesome/fontawesome";
 @import "vendor/font-awesome/solid";
@@ -40,12 +41,10 @@
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
 
-$scroll_offset : 2em;
-h1:before, .anchor:before { 
-    content: ''; 
-    display: block; 
-    position: relative; 
-    width: 0; 
-    height: $scroll_offset; 
-    margin-top: -$scroll_offset;
+html {
+  scroll-padding-top: 4.5rem;
+}
+
+h1[id] {
+  scroll-margin-top: 4.5rem;
 }

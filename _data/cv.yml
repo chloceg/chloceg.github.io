@@ -1,0 +1,186 @@
+# Single source of truth for the resume.
+# After editing: python3 scripts/render_readme.py
+# The homepage (_pages/about.md) reads this file at build time.
+
+name: Jeff Ge
+headline: AI Architect & Engineer
+location: Hong Kong
+email: njycgqw@icloud.com
+phone: "+852 5335 2638"
+github: chloceg
+website: https://chloceg.github.io
+pdf: /files/Jeff-Ge-CV.pdf
+open_to_work: true
+last_updated: 2026-11-11
+
+description: >-
+  AI Architect & Engineer with 3+ years of industry experience driving AI
+  transformation through LLMs, graph analytics, and NLP.
+
+highlights:
+  - 3+ years in AI engineering
+  - GraphRAG / RAG / agents
+  - Neo4j · 1M+ entities
+  - 95%+ retrieval accuracy
+
+summary:
+  - >-
+    AI Architect & Engineer with 3+ years of industry experience driving AI
+    transformation through strategic integration of LLMs, graph analytics, and
+    NLP architectures.
+  - >-
+    **Cross-industry impact**: Trusted to design and deliver highly scalable AI
+    solutions for top-tier clients across telecommunications (HKBN), finance
+    (Deloitte, HKMA), and the public sector (HKPF, Airport Authority).
+  - >-
+    **From innovation to ROI**: Adept at translating cutting-edge AI into
+    measurable business value. Experienced in architecting RAG/agent frameworks
+    and driving enterprise adoption through client workshops on next-generation
+    AI tools.
+
+experience:
+  - company: Hong Kong Broadband Network
+    location: Hong Kong
+    title: Specialist, AI Application
+    start: Nov 2025
+    end: Aug 2026
+    bullets:
+      - >-
+        **TenderAI**: Led the design and deployment of a GraphRAG-powered
+        enterprise platform using LlamaIndex, Neo4j, and PostgreSQL to optimize
+        the company's tender process and drive AI-based analysis.
+      - >-
+        **Hybrid retrieval pipeline**: Built a multi-strategy retrieval engine
+        combining vector semantic search, graph traversal, and keyword matching.
+        Implemented a multi-file evidence extractor with page-level citations,
+        reaching 95%+ retrieval accuracy and cutting query latency by 40%.
+      - >-
+        **Technical consulting & pre-sales**: Partnered with sales on client
+        engagements, turning business requirements into localized deployment
+        plans. Evaluated external vendors and advised senior leadership on
+        technical decisions.
+
+  - company: Hong Kong Applied Science and Technology Research Institute
+    location: Hong Kong
+    title: AI Engineer
+    start: Mar 2023
+    end: Nov 2025
+    bullets:
+      - >-
+        **Neo4j graph algorithms**: Deployed community detection and node
+        similarity on an HKMA network-analysis program. Built a graph data model
+        of financial-entity relationships and delivered interactive
+        visualizations for regulatory risk assessment -- money laundering, market
+        manipulation, and fraud. Mapped 1M+ entities and reduced risk
+        identification from days to hours.
+      - >-
+        **ChatDoc LLM**: Built a conversational RAG system for Hong Kong Police
+        Force and Airport Authority programs, and added a user-feedback module
+        to the ChatDoc backend to capture and analyze interactions.
+      - >-
+        **ESG NER extraction**: Trained UIE models for ESG initiative
+        recognition. Shipped an API that lets Deloitte users extract targets
+        from annual reports, and supported the ESG reasoning backend.
+      - >-
+        **AI advertising visualization**: Explored image generation with Stable
+        Diffusion, ComfyUI, and ControlNet. Built end-to-end pipelines to train
+        task-specific models that generate custom background images, reducing
+        clients' reliance on Shutterstock.
+
+  - company: Bank of China Financial Technology Co., Ltd.
+    location: Shanghai
+    title: Intelligent Risk Control
+    start: Jun 2022
+    end: Sep 2022
+    bullets:
+      - >-
+        **Intelligent property valuation**: Researched IP-valuation firms and
+        available public data sources.
+      - >-
+        **Model training**: Segmented intellectual property into high, mid, and
+        low net-worth groups for model training.
+
+projects:
+  - name: HUAWEI CTF Security Competition
+    role: Core Team Member
+    start: Jul 2022
+    end: Aug 2022
+    bullets:
+      - >-
+        Constructed a discrete elliptic-curve Abel group over a finite field
+        using modular arithmetic. Recovered RSA primes p and q, computed Euler's
+        totient, and derived the private exponent d to obtain the FLAG.
+
+  - name: "Credit Suisse: CodeIT Competition"
+    role: Core Team Member
+    start: Sep 2022
+    end: Oct 2022
+    bullets:
+      - >-
+        Programming hackathon; collaborated with teammates on GitHub and placed
+        7th of 24 teams.
+
+skills:
+  - name: Programming
+    items:
+      - Python
+      - Java
+      - Linux
+      - Git
+  - name: AI & Machine Learning
+    items:
+      - PyTorch
+      - RAG / GraphRAG
+      - LlamaIndex
+      - LoRA
+      - LightGBM
+      - Ollama
+      - ComfyUI
+      - Stable Diffusion
+      - OpenCV
+      - Pandas
+      - NumPy
+  - name: Data & Deployment
+    items:
+      - Neo4j
+      - PostgreSQL
+      - Milvus
+      - Docker
+      - Kubernetes
+  - name: AI-assisted Development
+    items:
+      - Cursor
+      - Claude Code
+      - VS Code
+      - Codex
+      - OpenClaw
+      - Hermes Agent
+
+education:
+  - school: The Hong Kong Polytechnic University
+    location: Hong Kong
+    degree: M.Sc. in Data Science and Analytics
+    start: Sep 2021
+    end: Mar 2023
+    notes: >-
+      Related courses: Optimization Methods, Principles of Data Science,
+      Statistical Data Mining, Big Data Computing, Advanced High Dimensional
+      Data Analysis, Deep Learning.
+
+  - school: Hohai University
+    location: Nanjing, China
+    degree: B.Sc. in Information and Computing Science
+    start: Sep 2017
+    end: Jun 2021
+    notes: >-
+      Related courses: C++, Data Structure, Machine Learning, Stochastic
+      Process, Multivariate Statistics, Probability, Mathematical Modeling,
+      PDE, ODE, Numerical Analysis, Optimization Algorithm.
+
+awards:
+  - name: "Credit Suisse: CodeIT Competition"
+    detail: 7th of 24 teams
+    date: Oct 2022
+  - name: HUAWEI CTF Security Competition
+    detail: Core Team Member
+    date: Aug 2022
