@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "Jeff Ge"
-description              : "AI Architect & Engineer with 3+ years of industry experience driving AI transformation through LLMs, Graph Analytics, and NLP."
+description              : "AI Specialist at HKBN. Sole owner of TenderAI, a production GraphRAG tender platform used daily by 80+ colleagues."
 url                      : "https://chloceg.github.io"
 baseurl                  : ""
 repository               : "chloceg/chloceg.github.io"
@@ -27,13 +27,14 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "Jeff Ge"
   avatar           : "images/android-chrome-512x512.png"
-  bio              : "AI Architect & Engineer"
+  bio              : "AI Specialist"
   email            : "njycgqw@icloud.com"
   phone            : "+852 5335 2638"
-  location         : # not provided in the CV
-  employer         : # not provided in the CV
+  location         : "Hong Kong"
+  employer         : "HKBN"
   uri              :
-  github           : # e.g., "github username"
+  github           : "chloceg"
+  cv               : "files/Jeff-Ge-CV.pdf"
   linkedin         : # e.g., "linkedin username"
   twitter          :
   facebook         :
@@ -71,6 +72,9 @@ exclude:
   - package.json
   - tmp
   - vendor
+  - scripts
+  - run_server.sh
+  - docs
 keep_files:
   - .git
   - .svn

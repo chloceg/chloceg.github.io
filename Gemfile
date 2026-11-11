@@ -24,3 +24,6 @@ end
 # tzinfo-data supplies the Asia/Hong_Kong zone data Windows itself lacks.
 gem "wdm", "~> 0.1.0", platforms: [:mswin, :mingw, :x64_mingw]
 gem "tzinfo-data", platforms: [:mswin, :mingw, :x64_mingw]
+
+# Bundled with Ruby 2.x; required by `jekyll serve` on Ruby 3.
+gem "webrick", "~> 1.9"

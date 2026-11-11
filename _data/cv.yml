@@ -1,0 +1,171 @@
+# Public CV branch of docs/master-resume-library.md
+# After editing: python3 scripts/render_readme.py
+# Do not put interview-only metrics (94% retrieval) or [TBD] numbers here.
+
+name: Jeff Ge
+headline: AI Specialist
+location: Hong Kong
+email: njycgqw@icloud.com
+phone: "+852 5335 2638"
+github: chloceg
+website: https://chloceg.github.io
+pdf: /files/Jeff-Ge-CV.pdf
+open_to_work: false
+last_updated: 2026-11-11
+
+description: >-
+  AI Specialist at HKBN. Sole owner of TenderAI, a production GraphRAG
+  tender platform used daily by 80+ colleagues.
+
+highlights:
+  - TenderAI in production
+  - 80+ colleagues on it daily
+  - HKMA / HKPF / AA / Deloitte programs
+
+summary:
+  - >-
+    AI Specialist with 3+ years shipping production LLM/GraphRAG systems.
+    Sole owner of TenderAI, a multi-tenant tender platform (LlamaIndex +
+    Neo4j + FastAPI) used daily by 80+ colleagues.
+
+experience:
+  - company: Hong Kong Broadband Network
+    location: Hong Kong
+    title: AI Specialist
+    start: Nov 2025
+    end: Present
+    bullets:
+      - >-
+        **TenderAI**: Sole owner of the in-house tender platform — GraphRAG
+        on FastAPI, LlamaIndex and Neo4j, Vue3 on the front, PostgreSQL for
+        service data. 80+ colleagues use it daily for proposal-weakness
+        analysis, outline drafting, and a dashboard of tender success rates.
+      - >-
+        **Retrieval pipeline**: Mix of vector search, graph hops and keyword
+        matching, with page-level citations from multi-file evidence. Tenant
+        filters on the shared Neo4j store keep neighbouring tenders from
+        leaking; FastAPI streaming moves blocking LLM I/O off the event loop
+        under concurrent use.
+      - >-
+        **Presales**: First-line AI consult sitting with sales, 1,500+ SME
+        customers at team scope. The actual job was deciding whether a vendor
+        tool could be stood up locally, then telling management yes, no, or
+        only with a local deploy.
+
+  - company: Hong Kong Applied Science and Technology Research Institute
+    location: Hong Kong
+    title: AI Engineer
+    start: Apr 2023
+    end: Oct 2025
+    bullets:
+      - >-
+        **HKMA network graph**: Community detection and node similarity on
+        an HKMA programme. Built the financial-entity graph in Neo4j and the
+        interactive view used when analysts looked at laundering, manipulation
+        and fraud rings.
+      - >-
+        **ChatDoc**: Focused on the Hong Kong Police Force and Airport
+        Authority programmes. RAG core that can swap the underlying LLM, plus
+        a backend feedback module that records how staff actually use the
+        assistant.
+      - >-
+        **ESG NER**: Trained UIE models for ESG initiative recognition and
+        shipped an API so Deloitte users can pull targets from annual reports.
+        Backend for the reasoning system sitting on that API.
+      - >-
+        **Campaign backgrounds**: Explored image generation with Stable
+        Diffusion, ComfyUI, ControlNet and LoRA. Batch pipelines for custom
+        backgrounds so campaigns did not have to lean on stock photography.
+
+  - company: Bank of China Financial Technology Co., Ltd.
+    location: Shanghai
+    title: Risk Modeling Intern
+    start: Jul 2022
+    end: Sep 2022
+    bullets:
+      - >-
+        **IP valuation**: Sourced and cleaned public and vendor data on
+        intellectual-property valuation, then trained LightGBM models that
+        bucket rights into high, mid and low net-worth tiers for risk pricing.
+
+projects:
+  - name: HUAWEI CTF Security Competition
+    role: Core Team Member
+    start: Jul 2022
+    end: Aug 2022
+    bullets:
+      - >-
+        Constructed a discrete elliptic-curve Abel group over a finite field
+        using modular arithmetic. Recovered RSA primes p and q, computed Euler's
+        totient, and derived the private exponent d to obtain the FLAG.
+
+  - name: "Credit Suisse: CodeIT Competition"
+    role: Core Team Member
+    start: Sep 2022
+    end: Oct 2022
+    bullets:
+      - >-
+        Programming hackathon in English with teammates on GitHub; placed 7th
+        of 24 university teams.
+
+skills:
+  - name: Languages & backend
+    items:
+      - Python
+      - FastAPI
+      - SQL
+      - Linux
+      - Git
+  - name: LLM & retrieval
+    items:
+      - LlamaIndex
+      - RAG / GraphRAG
+      - vLLM
+      - MCP
+      - PyTorch
+  - name: Data & graphs
+    items:
+      - Neo4j
+      - PostgreSQL
+      - Milvus
+      - Pandas
+      - LightGBM
+  - name: Image generation
+    items:
+      - ComfyUI
+      - Stable Diffusion
+      - ControlNet
+      - LoRA
+  - name: Deployment
+    items:
+      - Docker
+      - "Exposure: Kubernetes"
+
+education:
+  - school: The Hong Kong Polytechnic University
+    location: Hong Kong
+    degree: M.Sc. in Data Science and Analytics
+    start: Sep 2021
+    end: Mar 2023
+    notes: >-
+      Related courses: Optimization Methods, Principles of Data Science,
+      Statistical Data Mining, Big Data Computing, Advanced High Dimensional
+      Data Analysis, Deep Learning.
+
+  - school: Hohai University (Project 211)
+    location: Nanjing, China
+    degree: B.Sc. in Information and Computing Science
+    start: Sep 2017
+    end: Jun 2021
+    notes: >-
+      Related courses: C++, Data Structure, Machine Learning, Stochastic
+      Process, Multivariate Statistics, Probability, Mathematical Modeling,
+      PDE, ODE, Numerical Analysis, Optimization Algorithm.
+
+awards:
+  - name: "Credit Suisse: CodeIT Competition"
+    detail: 7th of 24 university teams
+    date: Oct 2022
+  - name: HUAWEI CTF Security Competition
+    detail: Core Team Member
+    date: Aug 2022

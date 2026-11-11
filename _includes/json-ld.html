@@ -1,0 +1,29 @@
+{% assign cv = site.data.cv %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": {{ cv.name | jsonify }},
+  "jobTitle": {{ cv.headline | jsonify }},
+  "description": {{ cv.description | jsonify }},
+  "email": {{ cv.email | jsonify }},
+  "telephone": {{ cv.phone | jsonify }},
+  "url": {{ cv.website | jsonify }},
+  "image": {{ site.author.avatar | relative_url | absolute_url | jsonify }},
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": {{ cv.location | jsonify }}
+  },
+  "sameAs": [
+    {{ cv.github | prepend: "https://github.com/" | jsonify }}
+  ],
+  "alumniOf": [
+    {% for school in cv.education %}
+    {
+      "@type": "EducationalOrganization",
+      "name": {{ school.school | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>

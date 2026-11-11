@@ -1,0 +1,71 @@
+/* Resume-specific layout on top of the AcadHomepage theme. */
+
+.cv-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45em 0.5em;
+  margin: 0.85em 0 0.4em;
+  padding: 0;
+  list-style: none;
+
+  li {
+    margin: 0;
+    padding: 0.22em 0.75em;
+    border: 1px solid $border-color;
+    border-radius: 999px;
+    background: $lighter-gray;
+    color: $darker-gray;
+    font-family: $sans-serif;
+    font-size: $type-size-6;
+    line-height: 1.45;
+  }
+}
+
+.cv-item {
+  margin-bottom: 1.15em;
+
+  h2 {
+    margin-top: 0.85em;
+    margin-bottom: 0.15em;
+  }
+
+  > ul {
+    margin-top: 0.35em;
+  }
+}
+
+.cv-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.15em 1.25em;
+  margin: 0 0 0.35em;
+  color: $gray;
+  font-size: $type-size-6;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.cv-role {
+  font-style: italic;
+}
+
+.cv-dates {
+  white-space: nowrap;
+}
+
+.author__location {
+  margin: 0.25em 0 0;
+  color: $gray;
+  font-family: $sans-serif;
+  font-size: $type-size-6;
+}
+
+.author__status {
+  margin: 0.35em 0 0;
+  color: $info-color;
+  font-family: $sans-serif;
+  font-size: $type-size-6;
+  font-weight: 600;
+}
