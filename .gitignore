@@ -10,3 +10,5 @@ scripts/__pycache__/
 .bundle/
 vendor/bundle/
 Gemfile.lock
+visitor-log/node_modules/
+visitor-log/.wrangler/

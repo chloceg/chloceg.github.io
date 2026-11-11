@@ -17,6 +17,9 @@ repository               : "chloceg/chloceg.github.io"
 visitor_count            : true
 google_analytics_id      :  # e.g. G-XXXXXXXXXX from https://analytics.google.com/
 clarity_id               :  # optional Microsoft Clarity project ID
+# Private IP log (Cloudflare Worker). Leave empty until visitor-log/README.md is followed.
+# Do not paste IPs into this repo. The Worker stores them; Pages never sees them.
+visitor_log_url          :
 
 # SEO Related
 google_site_verification :  # get google_site_verification from https://search.google.com/search-console/about
@@ -75,6 +78,7 @@ exclude:
   - scripts
   - run_server.sh
   - docs
+  - visitor-log
 keep_files:
   - .git
   - .svn
