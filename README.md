@@ -2,7 +2,7 @@
 
 # Jeff Ge
 
-**AI Architect & Engineer** · Hong Kong · Open to opportunities
+**AI Specialist** · Hong Kong
 
 [chloceg.github.io](https://chloceg.github.io) ·
 [PDF CV](https://chloceg.github.io/files/Jeff-Ge-CV.pdf) ·
@@ -10,38 +10,35 @@
 [GitHub](https://github.com/chloceg) ·
 [+852 5335 2638](tel:+85253352638)
 
-3+ years in AI engineering · GraphRAG / RAG / agents · Neo4j · 1M+ entities · 95%+ retrieval accuracy
+TenderAI in production · 80+ colleagues on it daily · HKMA / HKPF / AA / Deloitte programs
 
 这是我的个人简历仓库。网页版：[chloceg.github.io](https://chloceg.github.io) ，PDF：[Download CV](https://chloceg.github.io/files/Jeff-Ge-CV.pdf)。
 
 ## About Me
 
-- AI Architect & Engineer with 3+ years of industry experience driving AI transformation through strategic integration of LLMs, graph analytics, and NLP architectures.
-- **Cross-industry impact**: Trusted to design and deliver highly scalable AI solutions for top-tier clients across telecommunications (HKBN), finance (Deloitte, HKMA), and the public sector (HKPF, Airport Authority).
-- **From innovation to ROI**: Adept at translating cutting-edge AI into measurable business value. Experienced in architecting RAG/agent frameworks and driving enterprise adoption through client workshops on next-generation AI tools.
+- AI Specialist with 3+ years shipping production LLM/GraphRAG systems. Sole owner of TenderAI, a multi-tenant tender platform (LlamaIndex + Neo4j + FastAPI) used daily by 80+ colleagues.
 
 ## Experience
 
 ### Hong Kong Broadband Network
-*Specialist, AI Application · Nov 2025 – Aug 2026 · Hong Kong*
+*AI Specialist · Nov 2025 – Present · Hong Kong*
 
-- **TenderAI**: Led the design and deployment of a GraphRAG-powered enterprise platform using LlamaIndex, Neo4j, and PostgreSQL to optimize the company's tender process and drive AI-based analysis.
-- **Hybrid retrieval pipeline**: Built a multi-strategy retrieval engine combining vector semantic search, graph traversal, and keyword matching. Implemented a multi-file evidence extractor with page-level citations, reaching 95%+ retrieval accuracy and cutting query latency by 40%.
-- **Technical consulting & pre-sales**: Partnered with sales on client engagements, turning business requirements into localized deployment plans. Evaluated external vendors and advised senior leadership on technical decisions.
+- **TenderAI**: Sole owner of the in-house tender platform — GraphRAG on FastAPI, LlamaIndex and Neo4j, Vue3 on the front, PostgreSQL for service data. 80+ colleagues use it daily for proposal-weakness analysis, outline drafting, and a dashboard of tender success rates.
+- **Retrieval pipeline**: Mix of vector search, graph hops and keyword matching, with page-level citations from multi-file evidence. Tenant filters on the shared Neo4j store keep neighbouring tenders from leaking; FastAPI streaming moves blocking LLM I/O off the event loop under concurrent use.
+- **Presales**: First-line AI consult sitting with sales, 1,500+ SME customers at team scope. The actual job was deciding whether a vendor tool could be stood up locally, then telling management yes, no, or only with a local deploy.
 
 ### Hong Kong Applied Science and Technology Research Institute
-*AI Engineer · Mar 2023 – Nov 2025 · Hong Kong*
+*AI Engineer · Apr 2023 – Oct 2025 · Hong Kong*
 
-- **Neo4j graph algorithms**: Deployed community detection and node similarity on an HKMA network-analysis program. Built a graph data model of financial-entity relationships and delivered interactive visualizations for regulatory risk assessment -- money laundering, market manipulation, and fraud. Mapped 1M+ entities and reduced risk identification from days to hours.
-- **ChatDoc LLM**: Built a conversational RAG system for Hong Kong Police Force and Airport Authority programs, and added a user-feedback module to the ChatDoc backend to capture and analyze interactions.
-- **ESG NER extraction**: Trained UIE models for ESG initiative recognition. Shipped an API that lets Deloitte users extract targets from annual reports, and supported the ESG reasoning backend.
-- **AI advertising visualization**: Explored image generation with Stable Diffusion, ComfyUI, and ControlNet. Built end-to-end pipelines to train task-specific models that generate custom background images, reducing clients' reliance on Shutterstock.
+- **HKMA network graph**: Community detection and node similarity on an HKMA programme. Built the financial-entity graph in Neo4j and the interactive view used when analysts looked at laundering, manipulation and fraud rings.
+- **ChatDoc**: Focused on the Hong Kong Police Force and Airport Authority programmes. RAG core that can swap the underlying LLM, plus a backend feedback module that records how staff actually use the assistant.
+- **ESG NER**: Trained UIE models for ESG initiative recognition and shipped an API so Deloitte users can pull targets from annual reports. Backend for the reasoning system sitting on that API.
+- **Campaign backgrounds**: Explored image generation with Stable Diffusion, ComfyUI, ControlNet and LoRA. Batch pipelines for custom backgrounds so campaigns did not have to lean on stock photography.
 
 ### Bank of China Financial Technology Co., Ltd.
-*Intelligent Risk Control · Jun 2022 – Sep 2022 · Shanghai*
+*Risk Modeling Intern · Jul 2022 – Sep 2022 · Shanghai*
 
-- **Intelligent property valuation**: Researched IP-valuation firms and available public data sources.
-- **Model training**: Segmented intellectual property into high, mid, and low net-worth groups for model training.
+- **IP valuation**: Sourced and cleaned public and vendor data on intellectual-property valuation, then trained LightGBM models that bucket rights into high, mid and low net-worth tiers for risk pricing.
 
 ## Projects
 
@@ -53,14 +50,15 @@
 ### Credit Suisse: CodeIT Competition
 *Core Team Member · Sep 2022 – Oct 2022*
 
-- Programming hackathon; collaborated with teammates on GitHub and placed 7th of 24 teams.
+- Programming hackathon in English with teammates on GitHub; placed 7th of 24 university teams.
 
 ## Skills
 
-- **Programming**: Python, Java, Linux, Git
-- **AI & Machine Learning**: PyTorch, RAG / GraphRAG, LlamaIndex, LoRA, LightGBM, Ollama, ComfyUI, Stable Diffusion, OpenCV, Pandas, NumPy
-- **Data & Deployment**: Neo4j, PostgreSQL, Milvus, Docker, Kubernetes
-- **AI-assisted Development**: Cursor, Claude Code, VS Code, Codex, OpenClaw, Hermes Agent
+- **Languages & backend**: Python, FastAPI, SQL, Linux, Git
+- **LLM & retrieval**: LlamaIndex, RAG / GraphRAG, vLLM, MCP, PyTorch
+- **Data & graphs**: Neo4j, PostgreSQL, Milvus, Pandas, LightGBM
+- **Image generation**: ComfyUI, Stable Diffusion, ControlNet, LoRA
+- **Deployment**: Docker, Exposure: Kubernetes
 
 ## Education
 
@@ -68,13 +66,13 @@
 *M.Sc. in Data Science and Analytics · Sep 2021 – Mar 2023 · Hong Kong*
 - Related courses: Optimization Methods, Principles of Data Science, Statistical Data Mining, Big Data Computing, Advanced High Dimensional Data Analysis, Deep Learning.
 
-### Hohai University
+### Hohai University (Project 211)
 *B.Sc. in Information and Computing Science · Sep 2017 – Jun 2021 · Nanjing, China*
 - Related courses: C++, Data Structure, Machine Learning, Stochastic Process, Multivariate Statistics, Probability, Mathematical Modeling, PDE, ODE, Numerical Analysis, Optimization Algorithm.
 
 ## Awards
 
-- **Credit Suisse: CodeIT Competition** — 7th of 24 teams (Oct 2022)
+- **Credit Suisse: CodeIT Competition** — 7th of 24 university teams (Oct 2022)
 - **HUAWEI CTF Security Competition** — Core Team Member (Aug 2022)
 
 ## Contact

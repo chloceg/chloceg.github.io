@@ -1,7 +1,7 @@
 ---
 title: "Jeff Ge"
 permalink: /
-description: "AI Architect & Engineer with 3+ years of industry experience driving AI transformation through LLMs, graph analytics, and NLP."
+description: "AI Specialist at HKBN. Sole owner of TenderAI, a production GraphRAG tender platform used daily by 80+ colleagues."
 ---
 
 {% assign cv = site.data.cv %}
