@@ -25,4 +25,22 @@
 </script>
 {% endif %}
 
+{% if site.statcounter_project and site.statcounter_security %}
+<script>
+  var sc_project = {{ site.statcounter_project | plus: 0 }};
+  var sc_invisible = 1;
+  var sc_security = {{ site.statcounter_security | jsonify }};
+  var sc_https = 1;
+</script>
+<script src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript>
+  <div class="statcounter">
+    <img class="statcounter"
+         src="https://c.statcounter.com/{{ site.statcounter_project | plus: 0 }}/0/{{ site.statcounter_security | uri_escape }}/1/"
+         alt=""
+         referrerpolicy="no-referrer-when-downgrade">
+  </div>
+</noscript>
+{% endif %}
+
 {% endif %}

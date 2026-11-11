@@ -1,0 +1,9 @@
+name = "chloceg-visitor-log"
+main = "src/worker.js"
+compatibility_date = "2026-11-11"
+
+# Create a KV namespace, then paste the id here:
+#   npx wrangler kv namespace create VISITS
+[[kv_namespaces]]
+binding = "VISITS"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"

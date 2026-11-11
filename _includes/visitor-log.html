@@ -1,0 +1,21 @@
+{% if site.visitor_log_url %}
+<script>
+(function () {
+  var endpoint = {{ site.visitor_log_url | jsonify }};
+  if (!endpoint) return;
+  var url = String(endpoint).replace(/\/$/, "") + "/hit";
+  var payload = JSON.stringify({
+    path: location.pathname + location.search + location.hash,
+    ref: document.referrer || "",
+    lang: navigator.language || ""
+  });
+  try {
+    if (navigator.sendBeacon) {
+      navigator.sendBeacon(url, payload);
+      return;
+    }
+  } catch (e) {}
+  fetch(url, { method: "POST", body: payload, mode: "cors", keepalive: true }).catch(function () {});
+})();
+</script>
+{% endif %}
